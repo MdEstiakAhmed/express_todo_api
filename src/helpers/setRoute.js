@@ -15,6 +15,10 @@ const routes = [
         path: '/todo',
         handler: todoRoute
     },
+    {
+        path: '*',
+        handler: (req, res) => res.status(404).json("not found")
+    },
 ];
 
 module.exports = app => {
