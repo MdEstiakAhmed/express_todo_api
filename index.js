@@ -9,7 +9,7 @@ app.listen(port, () => {
 });
 
 let URL = process.env.DATABASE_URL;
-let options = {user: '', pass: ''};
+let options = {user: '', pass: '', autoIndex: true};
 mongoose.connect(URL, options, (error) => {
   error ? console.log(error) : console.log("Database Connected")
 });
