@@ -29,7 +29,7 @@ const schema = mongoose.Schema({
         required: true
     },
     dob: { type: Number }
-}, { versionKey: false });
+}, { versionKey: false, timestamps: true });
 
 const User = mongoose.model('users', schema);
 module.exports = User;

@@ -19,6 +19,10 @@
 2. login user
 3. view user profile
 4. update user profile
+5. add todo
+6. get todo (get by status, get between date range)
+7. update todo
+8. delete todo
 
 ##### Process to connect MongoDB with Compass
 

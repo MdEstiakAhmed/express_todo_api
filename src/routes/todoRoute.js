@@ -5,11 +5,12 @@ const getAll = require("../controllers/todo/getAll");
 const remove = require("../controllers/todo/remove");
 const update = require("../controllers/todo/update");
 const router = express.Router();
+const tokenChecker = require('../middleware/tokenVerifier');
 
-router.post('/create', create);
-router.get('/getAll', getAll);
-router.get('/get/:todoId', get);
-router.post('/update/:todoId', update);
-router.post('/remove/:todoId', remove);
+router.post('/create', tokenChecker, create);
+router.get('/getAll', tokenChecker, getAll);
+router.get('/get/:todoId', tokenChecker, get);
+router.post('/update/:todoId', tokenChecker, update);
+router.post('/remove/:todoId', tokenChecker, remove);
 
 module.exports = router;
